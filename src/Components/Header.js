@@ -1,38 +1,63 @@
+// Components
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import InputBase from '@material-ui/core/InputBase';
+import { Avatar, List, ListItem } from '@material-ui/core';
+
+// Icons
 import SearchIcon from '@material-ui/icons/Search';
-import { Avatar } from '@material-ui/core';
-import useStyles from "./ComponentStyle.js"
+import ShoppingCart from '@material-ui/icons/ShoppingCartOutlined';
+
+// Theme
+import { globalStyles, headerStyles } from "./ComponentStyle.js"
 
 export default function Header() {
-    const classes = useStyles();
+    const globalClasses = globalStyles();
+    const headClasses = headerStyles();
 
     return (
-        <AppBar position="static">
-            <Toolbar className={classes.headerToolbars}>
-                <Typography className={classes.headerLogoTitle} variant="h6" noWrap>
-                    Lojenha Online
-                </Typography>
-                <div className={'_df'}>
-                    <span>Mathias</span>
-                    <Avatar style={{backgroundColor: 'greeen'}}>M</Avatar>
+        <AppBar className={headClasses.header}>
+            <Toolbar className={headClasses.headerToolbars}>
+                <div className={globalClasses.gutter}>
+                    <Typography className={headClasses.headerLogoTitle} variant="h6" noWrap>
+                        Lojenha Online
+                    </Typography>
+
+                    <a href="/user" className={headClasses.headerUserSpace}>
+                        <span>Mathias</span>
+                        <Avatar>M</Avatar>
+                    </a>
                 </div>
             </Toolbar>
-            <Toolbar className={classes.headerToolbars}>
-                <div className={classes.search}>
-                    <div className={classes.searchIcon}>
-                        <SearchIcon />
+
+            <Toolbar className={headClasses.headerToolbars}>
+                <div className={globalClasses.gutter}>
+                    <div className={headClasses.headerSearchFather}>
+                        <InputBase
+                            placeholder="O que você procura?"
+                            classes={{
+                                root: headClasses.headerSearchRoot,
+                                input: headClasses.headerSeachInput,
+                            }}
+                            inputProps={{ 'aria-label': 'procure' }}
+                        />
+                        <div className={headClasses.headerSearchIcon}>
+                            <SearchIcon />
+                        </div>
                     </div>
-                    <InputBase
-                        placeholder="Search…"
-                        classes={{
-                            root: classes.inputRoot,
-                            input: classes.inputInput,
-                        }}
-                        inputProps={{ 'aria-label': 'search' }}
-                    />
+
+                    <div>
+                        <List className={headClasses.headerNavbar}>
+                            <ListItem button component="a" href="#">Camisetas</ListItem>
+                            <ListItem button component="a" href="#">Calças</ListItem>
+                            <ListItem button component="a" href="#">Blusas</ListItem>
+                            <ListItem button component="a" href="#">Vestidos</ListItem>
+                            <ListItem button component="a" href="#">
+                                <ShoppingCart />
+                            </ListItem>
+                        </List>
+                    </div>
                 </div>
             </Toolbar>
         </AppBar>

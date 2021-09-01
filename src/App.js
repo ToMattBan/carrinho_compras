@@ -2,7 +2,7 @@ import Products from "./Assets/products.json"
 
 function App() {
   return (
-    <div style={{'display': 'none'}}>
+    <div>
       {Products.map((product, index) => (
         <h4 key={product.Id}>
           <div>Id - { product.Id }</div>

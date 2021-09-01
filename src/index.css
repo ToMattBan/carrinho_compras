@@ -1,9 +1,3 @@
-:root {
-  --primary: #000;
-  --secundary: #fff;
-  --terciary: #535353;
-}
-
 body {
   margin: 0;
   background-color: #eeeeee;
