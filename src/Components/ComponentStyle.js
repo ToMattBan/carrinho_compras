@@ -45,7 +45,7 @@ const headerStyles = makeStyles((theme) => ({
 
     headerToolbars: {
         minHeight: '30px',
-        padding: '8px',
+        padding: '8px 0',
 
         '&:first-child': {
             backgroundColor: themeConfig.colors.secundary,

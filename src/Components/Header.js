@@ -21,7 +21,7 @@ export default function Header() {
             <Toolbar className={headClasses.headerToolbars}>
                 <div className={globalClasses.gutter}>
                     <Typography className={headClasses.headerLogoTitle} variant="h6" noWrap>
-                        Lojenha Online
+                        Lojenha Onlaine
                     </Typography>
 
                     <a href="/user" className={headClasses.headerUserSpace}>
