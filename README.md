@@ -1,5 +1,9 @@
 # CARRINHO DE COMPRAS
 
+### INFORMAÇÕES
+- Layout da loja baseado em layout criado por [Pedro Murilo](https://www.linkedin.com/in/pedro-murilo/)
+- Imagens dos produtos pegas no [freepick](https://www.freepik.com/)
+
 ### REQUISITOS
 - Deve ser feito com material design
 - Deve criar um arquivo json com 12 produtos (produtos.json)

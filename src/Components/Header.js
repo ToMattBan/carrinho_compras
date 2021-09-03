@@ -20,9 +20,11 @@ export default function Header() {
         <AppBar className={headClasses.header}>
             <Toolbar className={headClasses.headerToolbars}>
                 <div className={globalClasses.gutter}>
-                    <Typography className={headClasses.headerLogoTitle} variant="h6" noWrap>
-                        Lojenha Onlaine
-                    </Typography>
+                    <a href="/" className={headClasses.headerLogoTitle}>
+                        <Typography variant="h6" noWrap>
+                            Lojenha Onlaine
+                        </Typography>
+                    </a>
 
                     <a href="/user" className={headClasses.headerUserSpace}>
                         <span>Mathias</span>
@@ -49,11 +51,11 @@ export default function Header() {
 
                     <div>
                         <List className={headClasses.headerNavbar}>
-                            <ListItem button component="a" href="#">Camisetas</ListItem>
-                            <ListItem button component="a" href="#">Calças</ListItem>
-                            <ListItem button component="a" href="#">Blusas</ListItem>
-                            <ListItem button component="a" href="#">Vestidos</ListItem>
-                            <ListItem button component="a" href="#">
+                            <ListItem button component="a" href="/camisas">Camisetas</ListItem>
+                            <ListItem button component="a" href="/calcas">Calças</ListItem>
+                            <ListItem button component="a" href="/blusas">Blusas</ListItem>
+                            <ListItem button component="a" href="/vestidos">Vestidos</ListItem>
+                            <ListItem button component="a" href="/cart">
                                 <ShoppingCart />
                             </ListItem>
                         </List>

@@ -40,7 +40,7 @@ const headerStyles = makeStyles((theme) => ({
     header: {
         backgroundColor: 'inherit',
         position: 'sticky',
-        top: '0'
+        top: '0',
     },
 
     headerToolbars: {
@@ -69,6 +69,9 @@ const headerStyles = makeStyles((theme) => ({
         [theme.breakpoints.up('sm')]: {
             display: 'block',
         },
+
+        color: themeConfig.colors.primary,
+        textDecoration: 'none',
     },
 
     headerUserSpace: {
@@ -104,7 +107,7 @@ const headerStyles = makeStyles((theme) => ({
         justifyContent: 'space-between',
 
         '&:hover': {
-            opacity: '0.9'
+            opacity: '0.9',
         },
     },
 
@@ -142,7 +145,19 @@ const pageListProductsStyles = makeStyles((theme) => ({
         [theme.breakpoints.up('md')]: {
             marginTop: '64px',
         },
-    }
-}))
+    },
+}));
 
-export {globalStyles, headerStyles, pageListProductsStyles}
+const productsStyle = makeStyles((theme) => ({
+    productFather: {
+        textAlign: 'center',
+    },
+
+    productAnchor: {
+        color: themeConfig.colors.primary,
+        textDecoration: 'none',
+        backgroundColor: 'transparent',
+    },
+}));
+
+export {globalStyles, headerStyles, pageListProductsStyles, productsStyle}

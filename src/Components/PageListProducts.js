@@ -22,8 +22,8 @@ export default function PageProducts() {
                 <Grid item xs={9}>
                     <Grid container spacing={3}>
                         {productsList.map((product, index) => (
-                            <Grid item xs={4}>
-                                <Products product={product} key={index} />
+                            <Grid item xs={6} sm={4} md={3} key={index}>
+                                <Products product={product} />
                             </Grid>
                         ))}
                     </Grid>
