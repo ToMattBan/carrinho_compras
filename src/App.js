@@ -1,8 +1,8 @@
-import PageProducts from "./Components/PageProducts";
+import PageListProducts from "./Components/PageListProducts";
 
 function App() {
   return (
-    <PageProducts />
+    <PageListProducts />
   );
 }
 

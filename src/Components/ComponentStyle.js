@@ -23,15 +23,15 @@ const globalStyles = makeStyles((theme) => ({
         padding: '0 12px',
 
         [theme.breakpoints.up('sm')]: {
-            padding: '0 24px',
-        },
-
-        [theme.breakpoints.up('md')]: {
             padding: '0 32px',
         },
 
-        [theme.breakpoints.up('lg')]: {
+        [theme.breakpoints.up('md')]: {
             padding: '0 64px',
+        },
+
+        [theme.breakpoints.up('lg')]: {
+            padding: '0 128px',
         },
     }
 }));
@@ -44,8 +44,8 @@ const headerStyles = makeStyles((theme) => ({
     },
 
     headerToolbars: {
-        minHeight: '30px',
         padding: '8px 0',
+        minHeight: '30px',
 
         '&:first-child': {
             backgroundColor: themeConfig.colors.secundary,
@@ -131,4 +131,18 @@ const headerStyles = makeStyles((theme) => ({
     },
 }));
 
-export {globalStyles, headerStyles}
+const pageListProductsStyles = makeStyles((theme) => ({
+    container: {
+        marginTop: '24px',
+
+        [theme.breakpoints.up('sm')]: {
+            marginTop: '32px',
+        },
+
+        [theme.breakpoints.up('md')]: {
+            marginTop: '64px',
+        },
+    }
+}))
+
+export {globalStyles, headerStyles, pageListProductsStyles}
