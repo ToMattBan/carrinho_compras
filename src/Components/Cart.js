@@ -18,13 +18,14 @@ export default function Cart(props) {
 
     return (
         <div className={`${cartClasses.cartFather} ${props.isOpen ? cartClasses.cartFatherOpen : ''}`}>
-            <div>
-                <div className={cartClasses.cartHeader}>
-                    <ShoppingBasketOutlinedIcon />
-                    CARRINHO
-                    <CloseOutlinedIcon className={cartClasses.cartCloseIcon} onClick={e => props.setIsOpen(props.isOpen === false ? true : false)} />
-                </div>
+            <div className={cartClasses.cartHeader}>
+                <ShoppingBasketOutlinedIcon />
+                CARRINHO
+                <CloseOutlinedIcon className={cartClasses.cartCloseIcon} onClick={e => props.setIsOpen(props.isOpen === false ? true : false)} />
+            </div>
 
+            <div className={cartClasses.productList}>
+                {console.log('cart -->>>>>>>', listCart)}
                 {
                     listCart.map((product, index) => (
                         <Grid container spacing={3} key={index}>
@@ -40,7 +41,7 @@ export default function Cart(props) {
                 }
             </div>
 
-            <div>
+            <div className={cartClasses.cartBottom}>
                 <div className={cartClasses.totalValue}>
                     <span>Valor Total</span>
                     <span>R$0,00</span>

@@ -19,10 +19,10 @@ function addToCart(product) {
 
     if (alreadyHave === false) {
         product.quantity = 1
-        window.listCart.push(product);
+        actualList.push(product);
     }
 
-    window.setListCart(window.listCart);
+    window.setListCart(actualList);
 
     window.setCartOpen(true);
 }

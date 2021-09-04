@@ -249,15 +249,27 @@ const cartStyles = makeStyles((theme) => ({
         justifyContent: 'space-between',
         alignItems: 'center',
         fontSize: '20px',
+        flex: '1',
         
         '& > *': {
             fontSize: '30px',
         },
     },
 
+    productList: {
+        flex: '30',
+        overflowX: 'hidden',
+        overflowY: 'auto',
+        margin: '24px 0',
+    },
+
     cartCloseIcon: {
         cursor: 'pointer',
         padding: '4px',
+    },
+
+    cartBottom:{
+        flex: 1,
     },
 
     totalValue: {
