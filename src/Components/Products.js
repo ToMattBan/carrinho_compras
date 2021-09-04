@@ -15,13 +15,20 @@ export default function Products(props) {
         <div id={id} className={productClasses.productFather}>
             <a href="#" className={productClasses.productAnchor}>
                 <img src={image} alt={name} width="100%" />
-                <div>{name}</div>
-                <div>{price.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</div>
-                {
-                    promotionPrice ?
+                <div className={productClasses.productName}>{name}</div>
+                
+                <div className={productClasses.productPrices}>
+                    <div className={promotionPrice ? productClasses.productOldPrice : ''}>
+                        {price.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}
+                    </div>
+                    
+                    {
+                        promotionPrice ?
                         <div>{promotionPrice.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</div>
                         : ''
-                }
+                    }
+
+                </div>
             </a>
             <Button variant="contained" className={productClasses.productAddCart}>
                 Adicionar ao carrinho

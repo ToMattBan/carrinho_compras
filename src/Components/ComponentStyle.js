@@ -7,7 +7,7 @@ const themeConfig = {
         terciary: '#535353',
     },
 
-    shape :{
+    shape: {
         borderRadius: {
             sm: '3px',
             default: '5px',
@@ -77,7 +77,7 @@ const headerStyles = makeStyles((theme) => ({
     headerUserSpace: {
         color: themeConfig.colors.terciary,
         textDecoration: 'none',
-        
+
         '&, > span': {
             display: 'flex',
             alignItems: 'center',
@@ -136,14 +136,14 @@ const headerStyles = makeStyles((theme) => ({
 
 const pageListProductsStyles = makeStyles((theme) => ({
     container: {
-        marginTop: '24px',
+        margin: '24px 0',
 
         [theme.breakpoints.up('sm')]: {
-            marginTop: '32px',
+            margin: '32px 0',
         },
 
         [theme.breakpoints.up('md')]: {
-            marginTop: '64px',
+            margin: '64px 0',
         },
     },
 }));
@@ -161,11 +161,37 @@ const productsStyle = makeStyles((theme) => ({
         color: themeConfig.colors.primary,
         textDecoration: 'none',
         backgroundColor: 'transparent',
+        fontSize: '18px',
+    },
+
+    productPrices: {
+        display: 'flex',
+        justifyContent: 'space-around',
+        marginTop: '8px',
+        alignItems: 'center',
+    },
+
+    productOldPrice: {
+        fontSize: '12px',
+        position: 'relative',
+
+        '&:after': {
+            content: '""',
+            backgroundColor: 'red',
+            position: 'absolute',
+            width: 'calc(100% + 24px)',
+            height: '2px',
+            left: '-12px',
+            top: '6px',
+            rotate: '10deg',
+        },
     },
 
     productAddCart: {
         backgroundColor: themeConfig.colors.primary,
         color: themeConfig.colors.secundary,
+        textTransform: 'capitalize',
+        marginTop: '12px',
 
         '&:hover': {
             backgroundColor: themeConfig.colors.terciary,
@@ -173,4 +199,4 @@ const productsStyle = makeStyles((theme) => ({
     }
 }));
 
-export {globalStyles, headerStyles, pageListProductsStyles, productsStyle}
+export { globalStyles, headerStyles, pageListProductsStyles, productsStyle }
