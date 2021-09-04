@@ -3,18 +3,14 @@ import ShoppingBasketOutlinedIcon from '@material-ui/icons/ShoppingBasketOutline
 import CloseOutlinedIcon from '@material-ui/icons/CloseOutlined';
 import DeleteForeverOutlinedIcon from '@material-ui/icons/DeleteForeverOutlined';
 import { Grid } from "@material-ui/core";
-import { useState } from "react";
 
 // Theme
 import { cartStyles } from "./ComponentStyle.js"
 import { Button } from '@material-ui/core';
 
 export default function Cart(props) {
+    var { listCart, setListCart } = props;
     const cartClasses = cartStyles();
-
-    const [listCart, setListCart] = useState([]);
-    window.listCart = listCart;
-    window.setListCart = setListCart;
 
     return (
         <div className={`${cartClasses.cartFather} ${props.isOpen ? cartClasses.cartFatherOpen : ''}`}>

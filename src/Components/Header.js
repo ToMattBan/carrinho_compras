@@ -8,7 +8,8 @@ import HeaderSecondBar from './HeaderSecondBar.js';
 // Theme
 import { globalStyles, headerStyles } from "./ComponentStyle.js"
 
-export default function Header() {
+export default function Header(props) {
+    var { listCart, setListCart } = props;
     const globalClasses = globalStyles();
     const headClasses = headerStyles();
 
@@ -29,7 +30,7 @@ export default function Header() {
                 </div>
             </Toolbar>
 
-            <HeaderSecondBar />
+            <HeaderSecondBar listCart={listCart} setListCart={setListCart} />
         </AppBar>
     );
 }

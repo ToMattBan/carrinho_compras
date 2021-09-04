@@ -28,7 +28,7 @@ function addToCart(product) {
 }
 
 export default function Products(props) {
-    let { product } = props;
+    var { product, listCart, setListCart } = props;
     let { id, image, name, price, promotionPrice } = product;
 
     price = parseFloat(price);

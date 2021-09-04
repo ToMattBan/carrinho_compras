@@ -15,7 +15,8 @@ import ShoppingCart from '@material-ui/icons/ShoppingCartOutlined';
 import { globalStyles, headerStyles } from "./ComponentStyle.js"
 
 
-export default function HeaderSecondBar() {
+export default function HeaderSecondBar(props) {
+    var { listCart, setListCart } = props;
     const globalClasses = globalStyles();
     const headClasses = headerStyles();
 
@@ -50,7 +51,7 @@ export default function HeaderSecondBar() {
                         </ListItem>
                     </List>
 
-                    <Cart isOpen={isOpen} setIsOpen={setIsOpen} />
+                    <Cart isOpen={isOpen} setIsOpen={setIsOpen} listCart={listCart} setListCart={setListCart} />
                 </div>
             </div>
         </Toolbar>
