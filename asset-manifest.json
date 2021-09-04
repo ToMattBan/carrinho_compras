@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/carrinho_compras/static/css/main.e374b479.chunk.css",
-    "main.js": "/carrinho_compras/static/js/main.08d79524.chunk.js",
-    "main.js.map": "/carrinho_compras/static/js/main.08d79524.chunk.js.map",
+    "main.js": "/carrinho_compras/static/js/main.b2321d9e.chunk.js",
+    "main.js.map": "/carrinho_compras/static/js/main.b2321d9e.chunk.js.map",
     "runtime-main.js": "/carrinho_compras/static/js/runtime-main.06da674a.js",
     "runtime-main.js.map": "/carrinho_compras/static/js/runtime-main.06da674a.js.map",
-    "static/js/2.1d791080.chunk.js": "/carrinho_compras/static/js/2.1d791080.chunk.js",
-    "static/js/2.1d791080.chunk.js.map": "/carrinho_compras/static/js/2.1d791080.chunk.js.map",
+    "static/js/2.d852b8a2.chunk.js": "/carrinho_compras/static/js/2.d852b8a2.chunk.js",
+    "static/js/2.d852b8a2.chunk.js.map": "/carrinho_compras/static/js/2.d852b8a2.chunk.js.map",
     "static/js/3.744c4f34.chunk.js": "/carrinho_compras/static/js/3.744c4f34.chunk.js",
     "static/js/3.744c4f34.chunk.js.map": "/carrinho_compras/static/js/3.744c4f34.chunk.js.map",
     "index.html": "/carrinho_compras/index.html",
     "static/css/main.e374b479.chunk.css.map": "/carrinho_compras/static/css/main.e374b479.chunk.css.map",
-    "static/js/2.1d791080.chunk.js.LICENSE.txt": "/carrinho_compras/static/js/2.1d791080.chunk.js.LICENSE.txt"
+    "static/js/2.d852b8a2.chunk.js.LICENSE.txt": "/carrinho_compras/static/js/2.d852b8a2.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.06da674a.js",
-    "static/js/2.1d791080.chunk.js",
+    "static/js/2.d852b8a2.chunk.js",
     "static/css/main.e374b479.chunk.css",
-    "static/js/main.08d79524.chunk.js"
+    "static/js/main.b2321d9e.chunk.js"
   ]
 }
