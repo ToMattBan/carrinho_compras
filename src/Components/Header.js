@@ -17,7 +17,7 @@ export default function Header() {
     const headClasses = headerStyles();
 
     return (
-        <AppBar className={headClasses.header}>
+        <AppBar className={headClasses.headerFather}>
             <Toolbar className={headClasses.headerToolbars}>
                 <div className={globalClasses.gutter}>
                     <a href="#" className={headClasses.headerLogoTitle}>

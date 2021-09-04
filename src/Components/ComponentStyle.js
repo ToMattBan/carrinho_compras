@@ -37,7 +37,7 @@ const globalStyles = makeStyles((theme) => ({
 }));
 
 const headerStyles = makeStyles((theme) => ({
-    header: {
+    headerFather: {
         backgroundColor: 'inherit',
         position: 'sticky',
         top: '0',
@@ -199,4 +199,14 @@ const productsStyle = makeStyles((theme) => ({
     }
 }));
 
-export { globalStyles, headerStyles, pageListProductsStyles, productsStyle }
+const filterStyle = makeStyles((theme) => ({
+
+}))
+
+export { 
+    globalStyles, 
+    headerStyles, 
+    pageListProductsStyles, 
+    productsStyle,
+    filterStyle,
+}
