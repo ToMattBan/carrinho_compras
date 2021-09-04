@@ -7,13 +7,17 @@ import { Grid } from "@material-ui/core";
 // Theme
 import { cartStyles } from "./ComponentStyle.js"
 
-function removeProduct(product, listCart, setListCart) {
+function removeProduct(product, listCart, setListCart, totalValue, setTotalValue) {
     listCart = JSON.parse(listCart);
+
+    var price = product.promotionPrice ? product.promotionPrice : product.price;
+    var productTotalValue = 0;
 
     for (let i = 0; i < listCart.length; i++) {
         var actualProduct = listCart[i];
 
         if (actualProduct.id === product.id) {
+            productTotalValue = price * product.quantity;
             listCart.splice(i, 1);
             listCart = JSON.stringify(listCart);
             setListCart(listCart);
@@ -21,11 +25,14 @@ function removeProduct(product, listCart, setListCart) {
             break
         }
     }
+
+    setTotalValue(totalValue - productTotalValue);
 }
 
-function changeQuantity(product, listCart, setListCart, operation) {
+function changeQuantity(product, listCart, setListCart, totalValue, setTotalValue, operation) {
     var actualQuantity = product.quantity;
     var newQuantity = operation === 'plus' ? actualQuantity + 1 : actualQuantity - 1;
+    var price = product.promotionPrice ? product.promotionPrice : product.price;
 
     if (newQuantity == 0) {
         removeProduct(product, listCart, setListCart);
@@ -38,7 +45,10 @@ function changeQuantity(product, listCart, setListCart, operation) {
             if (actualProduct.id === product.id) {
                 actualProduct.quantity = newQuantity;
                 product.quantity = newQuantity;
-                console.log(listCart);
+
+                let newValue = operation === 'plus' ? totalValue + parseFloat(price) : totalValue - parseFloat(price)
+                setTotalValue(newValue);
+
                 listCart = JSON.stringify(listCart);
                 setListCart(listCart);
 
@@ -46,11 +56,10 @@ function changeQuantity(product, listCart, setListCart, operation) {
             }
         }
     }
-
 }
 
 export default function CartProduct(props) {
-    var { product, listCart, setListCart } = props
+    var { product, listCart, setListCart, totalValue, setTotalValue } = props
     const cartClasses = cartStyles();
 
     var price = product.promotionPrice ? product.promotionPrice : product.price;
@@ -68,9 +77,9 @@ export default function CartProduct(props) {
                 <div>
                     <span>Quantidade:</span>
                     <span className={cartClasses.productQuantity}>
-                        <RemoveIcon onClick={e => changeQuantity(product, listCart, setListCart, 'minus')} />
+                        <RemoveIcon onClick={e => changeQuantity(product, listCart, setListCart, totalValue, setTotalValue, 'minus')} />
                         <span>{product.quantity}</span>
-                        <AddIcon onClick={e => changeQuantity(product, listCart, setListCart, 'plus')} />
+                        <AddIcon onClick={e => changeQuantity(product, listCart, setListCart, totalValue, setTotalValue, 'plus')} />
                     </span>
                 </div>
 
@@ -90,7 +99,7 @@ export default function CartProduct(props) {
 
                 <DeleteForeverOutlinedIcon
                     className={cartClasses.removeProductIcon}
-                    onClick={e => removeProduct(product, listCart, setListCart)}
+                    onClick={e => removeProduct(product, listCart, setListCart, totalValue, setTotalValue)}
                 />
             </Grid>
         </Grid>

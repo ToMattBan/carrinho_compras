@@ -22,7 +22,7 @@ export default function Cart(props) {
 
             <div className={cartClasses.productList}>
                 {JSON.parse(listCart).map((product, index) => (
-                    <CartProduct key={index} product={product} listCart={listCart} setListCart={setListCart} />
+                    <CartProduct key={index} product={product} listCart={listCart} setListCart={setListCart} totalValue={totalValue} setTotalValue={setTotalValue} />
                 ))}
             </div>
 
