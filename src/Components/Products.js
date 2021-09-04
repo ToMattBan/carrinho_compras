@@ -4,7 +4,7 @@ import { productsStyle } from "./ComponentStyle.js"
 
 export default function Products(props) {
     let product = props.product;
-    let { id, image, url, name, price, promotionPrice } = product;
+    let { id, image, name, price, promotionPrice } = product;
 
     price = parseFloat(price);
     promotionPrice = parseFloat(promotionPrice);

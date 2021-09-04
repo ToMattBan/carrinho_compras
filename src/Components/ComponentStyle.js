@@ -5,6 +5,7 @@ const themeConfig = {
         primary: '#000',
         secundary: '#fff',
         terciary: '#535353',
+        divisories: '#d9cbcb',
     },
 
     shape: {
@@ -201,7 +202,7 @@ const productsStyle = makeStyles((theme) => ({
 
 const filterStyle = makeStyles((theme) => ({
     filtersFather: {
-        borderRight: 'solid 1px #d9cbcb',
+        borderRight: `solid 1px ${themeConfig.colors.divisories}`,
     },
 
     filtersOrigin: {
@@ -219,10 +220,51 @@ const filterStyle = makeStyles((theme) => ({
     },
 }))
 
-export { 
-    globalStyles, 
-    headerStyles, 
-    pageListProductsStyles, 
+const cartStyles = makeStyles((theme) => ({
+    cartFather: {
+        height: '100vh',
+        width: '30vw',
+        padding: '16px',
+        position: 'fixed',
+        right: '0',
+        top: '0',
+        backgroundColor: '#eee',
+        borderLeft: 'solid 2px',
+        borderColor: themeConfig.colors.divisories,
+        minWidth: '400px',
+        transform: 'translateX(100%)',
+        animation: 'all 0.5s ease-in-out',
+        color: themeConfig.colors.primary,
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'space-between',
+    },
+
+    cartFatherOpen: {
+        transform: 'translateX(0%)',
+    },
+
+    cartHeader: {
+        display: 'flex',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        fontSize: '20px',
+        
+        '& > *': {
+            fontSize: '30px',
+        },
+    },
+
+    cartCloseIcon: {
+        cursor: 'pointer',
+    }
+}))
+
+export {
+    globalStyles,
+    headerStyles,
+    pageListProductsStyles,
     productsStyle,
     filterStyle,
+    cartStyles,
 }

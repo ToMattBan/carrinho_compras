@@ -60,7 +60,7 @@ export default function PageProducts() {
                     <div className={filterClasses.filtersName}>{filter.name}</div>
                     {
                         filter.options.map((option, index) => (
-                            <label for={`${filter.optionName}_${index}`} key={index} >
+                            <label htmlFor={`${filter.optionName}_${index}`} key={index} >
                                 <ListItem button>
                                     
                                     <input type="radio" 
