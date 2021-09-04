@@ -21,9 +21,8 @@ export default function Cart(props) {
             </div>
 
             <div className={cartClasses.productList}>
-                {console.log('cart -->>>>>>>', listCart)}
                 {
-                    listCart.map((product, index) => (
+                    JSON.parse(listCart).map((product, index) => (
                         <Grid container spacing={3} key={index}>
                             <Grid item xs={3}>
                                 <img src={product.image} width="100%" />

@@ -3,7 +3,7 @@ import Header from './Components/Header';
 import { useState } from "react";
 
 function App() {
-  const [listCart, setListCart] = useState([]);
+  const [listCart, setListCart] = useState('[]');
 
   return (
     <div>

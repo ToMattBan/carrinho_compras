@@ -2,8 +2,8 @@
 import { Button } from "@material-ui/core";
 import { productsStyle } from "./ComponentStyle.js"
 
-function addToCart(product) {
-    var actualList = window.listCart;
+function addToCart(product, listCart, setListCart) {
+    var actualList = JSON.parse(listCart);
 
     var alreadyHave = false;
 
@@ -12,7 +12,7 @@ function addToCart(product) {
 
         if (actualProduct.id === product.id) {
             alreadyHave = true;
-            product.quantity = product.quantity + 1;
+            actualProduct.quantity = actualProduct.quantity + 1;
             break;
         }
     }
@@ -22,7 +22,8 @@ function addToCart(product) {
         actualList.push(product);
     }
 
-    window.setListCart(actualList);
+    var actualList = JSON.stringify(actualList);
+    setListCart(actualList); 
 
     window.setCartOpen(true);
 }
@@ -55,7 +56,7 @@ export default function Products(props) {
 
                 </div>
             </a>
-            <Button variant="contained" className={productClasses.productAddCart} onClick={e => addToCart(product)}>
+            <Button variant="contained" className={productClasses.productAddCart} onClick={e => addToCart(product, listCart, setListCart)}>
                 Adicionar ao carrinho
             </Button>
         </div>
