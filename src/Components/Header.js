@@ -9,7 +9,7 @@ import HeaderSecondBar from './HeaderSecondBar.js';
 import { globalStyles, headerStyles } from "./ComponentStyle.js"
 
 export default function Header(props) {
-    var { listCart, setListCart } = props;
+    var { listCart, setListCart, totalValue, setTotalValue } = props;
     const globalClasses = globalStyles();
     const headClasses = headerStyles();
 
@@ -30,7 +30,7 @@ export default function Header(props) {
                 </div>
             </Toolbar>
 
-            <HeaderSecondBar listCart={listCart} setListCart={setListCart} />
+            <HeaderSecondBar listCart={listCart} setListCart={setListCart} totalValue={totalValue} setTotalValue={setTotalValue} />
         </AppBar>
     );
 }

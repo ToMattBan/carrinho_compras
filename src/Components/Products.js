@@ -2,7 +2,7 @@
 import { Button } from "@material-ui/core";
 import { productsStyle } from "./ComponentStyle.js"
 
-function addToCart(product, listCart, setListCart) {
+function addToCart(product, listCart, setListCart, totalValue, setTotalValue) {
     var actualList = JSON.parse(listCart);
 
     var alreadyHave = false;
@@ -12,6 +12,7 @@ function addToCart(product, listCart, setListCart) {
 
         if (actualProduct.id === product.id) {
             alreadyHave = true;
+            product.quantity = product.quantity + 1;
             actualProduct.quantity = actualProduct.quantity + 1;
             break;
         }
@@ -22,6 +23,10 @@ function addToCart(product, listCart, setListCart) {
         actualList.push(product);
     }
 
+    var productTotalPrice = parseFloat(product.promotionPrice ? product.promotionPrice : product.price);
+
+    setTotalValue(totalValue + productTotalPrice)
+
     var actualList = JSON.stringify(actualList);
     setListCart(actualList); 
 
@@ -29,7 +34,7 @@ function addToCart(product, listCart, setListCart) {
 }
 
 export default function Products(props) {
-    var { product, listCart, setListCart } = props;
+    var { product, listCart, setListCart, totalValue, setTotalValue } = props;
     let { id, image, name, price, promotionPrice } = product;
 
     price = parseFloat(price);
@@ -56,7 +61,7 @@ export default function Products(props) {
 
                 </div>
             </a>
-            <Button variant="contained" className={productClasses.productAddCart} onClick={e => addToCart(product, listCart, setListCart)}>
+            <Button variant="contained" className={productClasses.productAddCart} onClick={e => addToCart(product, listCart, setListCart, totalValue, setTotalValue)}>
                 Adicionar ao carrinho
             </Button>
         </div>

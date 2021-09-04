@@ -1,15 +1,15 @@
 // Components
 import ShoppingBasketOutlinedIcon from '@material-ui/icons/ShoppingBasketOutlined';
 import CloseOutlinedIcon from '@material-ui/icons/CloseOutlined';
-import DeleteForeverOutlinedIcon from '@material-ui/icons/DeleteForeverOutlined';
-import { Grid } from "@material-ui/core";
+import CartProduct from './CartProduct.js';
+import { Button } from '@material-ui/core';
+import { useState } from 'react';
 
 // Theme
 import { cartStyles } from "./ComponentStyle.js"
-import { Button } from '@material-ui/core';
 
 export default function Cart(props) {
-    var { listCart, setListCart } = props;
+    var { listCart, setListCart, totalValue, setTotalValue } = props;
     const cartClasses = cartStyles();
 
     return (
@@ -21,25 +21,17 @@ export default function Cart(props) {
             </div>
 
             <div className={cartClasses.productList}>
-                {
-                    JSON.parse(listCart).map((product, index) => (
-                        <Grid container spacing={3} key={index}>
-                            <Grid item xs={3}>
-                                <img src={product.image} width="100%" />
-                            </Grid>
-                            <Grid item xs={9}>
-                                {product.name} | {product.quantity} | {product.price * product.quantity}
-                                <DeleteForeverOutlinedIcon />
-                            </Grid>
-                        </Grid>
-                    ))
-                }
+                {JSON.parse(listCart).map((product, index) => (
+                    <CartProduct key={index} product={product} listCart={listCart} setListCart={setListCart} />
+                ))}
             </div>
 
             <div className={cartClasses.cartBottom}>
                 <div className={cartClasses.totalValue}>
                     <span>Valor Total</span>
-                    <span>R$0,00</span>
+                    <span>
+                        {totalValue.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}
+                    </span>
                 </div>
                 <Button variant="contained" className={cartClasses.cartFinalizePurchase}>
                     Finalizar compra

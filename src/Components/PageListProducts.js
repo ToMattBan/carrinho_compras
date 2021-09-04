@@ -11,7 +11,7 @@ import { globalStyles } from "./ComponentStyle.js"
 import { pageListProductsStyles } from "./ComponentStyle.js"
 
 export default function PageProducts(props) {
-    var { listCart, setListCart } = props;
+    var { listCart, setListCart, totalValue, setTotalValue } = props;
     var globalClasses = globalStyles();
     var plpClasses = pageListProductsStyles();
 
@@ -25,7 +25,7 @@ export default function PageProducts(props) {
                     <Grid container spacing={3}>
                         {productsList.map((product, index) => (
                             <Grid item xs={6} sm={4} lg={3} key={index}>
-                                <Products product={product} listCart={listCart} setListCart={setListCart} />
+                                <Products product={product} listCart={listCart} setListCart={setListCart} totalValue={totalValue} setTotalValue={setTotalValue} />
                             </Grid>
                         ))}
                     </Grid>

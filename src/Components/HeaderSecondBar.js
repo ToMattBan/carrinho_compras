@@ -16,7 +16,7 @@ import { globalStyles, headerStyles } from "./ComponentStyle.js"
 
 
 export default function HeaderSecondBar(props) {
-    var { listCart, setListCart } = props;
+    var { listCart, setListCart, totalValue, setTotalValue } = props;
     const globalClasses = globalStyles();
     const headClasses = headerStyles();
 
@@ -51,7 +51,7 @@ export default function HeaderSecondBar(props) {
                         </ListItem>
                     </List>
 
-                    <Cart isOpen={isOpen} setIsOpen={setIsOpen} listCart={listCart} setListCart={setListCart} />
+                    <Cart isOpen={isOpen} setIsOpen={setIsOpen} listCart={listCart} setListCart={setListCart} totalValue={totalValue} setTotalValue={setTotalValue} />
                 </div>
             </div>
         </Toolbar>
