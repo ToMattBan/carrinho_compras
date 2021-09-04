@@ -16,13 +16,13 @@ export default function PageProducts() {
     return (
         <div className={`${globalClasses.gutter} ${plpClasses.container}`}>
             <Grid container spacing={3}>
-                <Grid item xs={3}>
+                <Grid item xs={12} md={3}>
                     HEHEHEHE
                 </Grid>
-                <Grid item xs={9}>
+                <Grid item xs={12} md={9}>
                     <Grid container spacing={3}>
                         {productsList.map((product, index) => (
-                            <Grid item xs={6} sm={4} md={3} key={index}>
+                            <Grid item xs={6} sm={4} lg={3} key={index}>
                                 <Products product={product} />
                             </Grid>
                         ))}
