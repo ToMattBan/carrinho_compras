@@ -200,7 +200,23 @@ const productsStyle = makeStyles((theme) => ({
 }));
 
 const filterStyle = makeStyles((theme) => ({
+    filtersFather: {
+        borderRight: 'solid 1px #d9cbcb',
+    },
 
+    filtersOrigin: {
+        fontSize: '20px',
+        fontWeight: "bold",
+    },
+
+    filtersName: {
+        fontWeight: "bold",
+        marginTop: '24px',
+    },
+
+    filtersInputRadio: {
+        margin: '0 4px 0 0',
+    },
 }))
 
 export { 

@@ -8,6 +8,7 @@ export default function PageProducts() {
     var filters = [
         {
             name: '',
+            optionName: 'all',
             options: [
                 "Todos os Produtos",
                 "Lançamentos"
@@ -15,6 +16,7 @@ export default function PageProducts() {
         },
         {
             name: 'Gênero',
+            optionName: 'gender',
             options: [
                 "Feminino",
                 "Masculino"
@@ -22,6 +24,7 @@ export default function PageProducts() {
         },
         {
             name: 'Categorias',
+            optionName: 'category',
             options: [
                 "Blusas",
                 "Calças",
@@ -33,6 +36,7 @@ export default function PageProducts() {
         },
         {
             name: 'Preço',
+            optionName: 'price',
             options: [
                 "Menos de R$50,00",
                 "Entre R$50,00 e $99,99",
@@ -48,13 +52,26 @@ export default function PageProducts() {
     var filterClasses = filterStyle();
 
     return (
-        <div>
+        <div className={filterClasses.filtersFather}>
+            <div className={filterClasses.filtersOrigin}>Filtros</div>
+
             {filters.map((filter, index) => (
-                <List>
-                    {filter.name}
+                <List key={index} >
+                    <div className={filterClasses.filtersName}>{filter.name}</div>
                     {
                         filter.options.map((option, index) => (
-                            <ListItem button>{option}</ListItem>
+                            <label for={`${filter.optionName}_${index}`} key={index} >
+                                <ListItem button>
+                                    
+                                    <input type="radio" 
+                                        name={filter.optionName} 
+                                        id={`${filter.optionName}_${index}`} 
+                                        className={filterClasses.filtersInputRadio}
+                                    />
+
+                                    {option}
+                                </ListItem>
+                            </label>
                         ))
                     }
                 </List>
