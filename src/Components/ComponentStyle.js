@@ -222,7 +222,7 @@ const filterStyle = makeStyles((theme) => ({
 
 const cartStyles = makeStyles((theme) => ({
     cartFather: {
-        height: '100vh',
+        height: 'calc(100vh - 32px)',
         width: '30vw',
         padding: '16px',
         position: 'fixed',
@@ -257,7 +257,25 @@ const cartStyles = makeStyles((theme) => ({
 
     cartCloseIcon: {
         cursor: 'pointer',
-    }
+        padding: '4px',
+    },
+
+    totalValue: {
+        display: 'flex',
+        justifyContent: 'space-between',
+    },
+
+    cartFinalizePurchase: {
+        backgroundColor: themeConfig.colors.primary,
+        color: themeConfig.colors.secundary,
+        textTransform: 'capitalize',
+        marginTop: '12px',
+        width: '100%',
+
+        '&:hover': {
+            backgroundColor: themeConfig.colors.terciary,
+        }
+    },
 }))
 
 export {

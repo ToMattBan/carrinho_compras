@@ -20,6 +20,7 @@ export default function HeaderSecondBar() {
     const headClasses = headerStyles();
 
     const [isOpen, setIsOpen] = useState(false);
+    window.setCartOpen = setIsOpen;
 
     return (
         <Toolbar className={headClasses.headerToolbars}>
