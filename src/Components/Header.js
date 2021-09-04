@@ -16,17 +16,19 @@ export default function Header() {
     const globalClasses = globalStyles();
     const headClasses = headerStyles();
 
+    const path = "/carrinho_compras"
+
     return (
         <AppBar className={headClasses.header}>
             <Toolbar className={headClasses.headerToolbars}>
                 <div className={globalClasses.gutter}>
-                    <a href="/" className={headClasses.headerLogoTitle}>
+                    <a href={path} className={headClasses.headerLogoTitle}>
                         <Typography variant="h6" noWrap>
                             Lojenha Onlaine
                         </Typography>
                     </a>
 
-                    <a href="/user" className={headClasses.headerUserSpace}>
+                    <a href={`${path}/user`} className={headClasses.headerUserSpace}>
                         <span>Mathias</span>
                         <Avatar>M</Avatar>
                     </a>
@@ -51,11 +53,11 @@ export default function Header() {
 
                     <div>
                         <List className={headClasses.headerNavbar}>
-                            <ListItem button component="a" href="/camisas">Camisetas</ListItem>
-                            <ListItem button component="a" href="/calcas">Calças</ListItem>
-                            <ListItem button component="a" href="/blusas">Blusas</ListItem>
-                            <ListItem button component="a" href="/vestidos">Vestidos</ListItem>
-                            <ListItem button component="a" href="/cart">
+                            <ListItem button component="a" href={`${path}/camisas`}>Camisetas</ListItem>
+                            <ListItem button component="a" href={`${path}/calcas`}>Calças</ListItem>
+                            <ListItem button component="a" href={`${path}/blusas`}>Blusas</ListItem>
+                            <ListItem button component="a" href={`${path}/vestidos`}>Vestidos</ListItem>
+                            <ListItem button component="a" href={`${path}/cart`}>
                                 <ShoppingCart />
                             </ListItem>
                         </List>

@@ -151,6 +151,10 @@ const pageListProductsStyles = makeStyles((theme) => ({
 const productsStyle = makeStyles((theme) => ({
     productFather: {
         textAlign: 'center',
+        height: '100%',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'space-between',
     },
 
     productAnchor: {
@@ -158,6 +162,15 @@ const productsStyle = makeStyles((theme) => ({
         textDecoration: 'none',
         backgroundColor: 'transparent',
     },
+
+    productAddCart: {
+        backgroundColor: themeConfig.colors.primary,
+        color: themeConfig.colors.secundary,
+
+        '&:hover': {
+            backgroundColor: themeConfig.colors.terciary,
+        }
+    }
 }));
 
 export {globalStyles, headerStyles, pageListProductsStyles, productsStyle}

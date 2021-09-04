@@ -1,5 +1,5 @@
 // Theme
-import { globalStyles } from "./ComponentStyle.js"
+import { Button } from "@material-ui/core";
 import { productsStyle } from "./ComponentStyle.js"
 
 export default function Products(props) {
@@ -9,13 +9,14 @@ export default function Products(props) {
     price = parseFloat(price);
     promotionPrice = parseFloat(promotionPrice);
 
-    var globalClasses = globalStyles();
+    const path = "/carrinho_compras"
+
     var productClasses = productsStyle();
 
     return (
         <div id={id} className={productClasses.productFather}>
-            <a href={url} className={productClasses.productAnchor}>
-                <img src={image} width="100%" height="100%"/>
+            <a href={`${path}/${url}`} className={productClasses.productAnchor}>
+                <img src={image} alt={name} width="100%" />
                 <div>{name}</div>
                 <div>{price.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</div>
                 {
@@ -24,6 +25,9 @@ export default function Products(props) {
                         : ''
                 }
             </a>
+            <Button variant="contained" className={productClasses.productAddCart}>
+                Adicionar ao carrinho
+            </Button>
         </div>
     )
 }
