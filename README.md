@@ -3,6 +3,7 @@
 ### INFORMAÇÕES
 - Layout da loja baseado em layout criado por [Pedro Murilo](https://www.linkedin.com/in/pedro-murilo/)
 - Imagens dos produtos pegas no [freepick](https://www.freepik.com/)
+- Após finalizado o teste, há o intuito de continuar o projeto para refletir um e-commerce inteiro.
 
 ### REQUISITOS
 - Deve ser feito com material design

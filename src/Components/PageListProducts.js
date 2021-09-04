@@ -17,7 +17,7 @@ export default function PageProducts() {
         <div className={`${globalClasses.gutter} ${plpClasses.container}`}>
             <Grid container spacing={3}>
                 <Grid item xs={12} md={3}>
-                    HEHEHEHE
+                    Filtros
                 </Grid>
                 <Grid item xs={12} md={9}>
                     <Grid container spacing={3}>
