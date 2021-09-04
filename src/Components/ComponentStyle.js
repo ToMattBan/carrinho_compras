@@ -1,4 +1,5 @@
 import { makeStyles } from '@material-ui/core/styles';
+import { CenterFocusStrong } from '@material-ui/icons';
 
 const themeConfig = {
     colors: {
@@ -232,6 +233,7 @@ const cartStyles = makeStyles((theme) => ({
         borderLeft: 'solid 2px',
         borderColor: themeConfig.colors.divisories,
         minWidth: '400px',
+        maxWidth: '600px',
         transform: 'translateX(100%)',
         animation: 'all 0.5s ease-in-out',
         color: themeConfig.colors.primary,
@@ -250,10 +252,16 @@ const cartStyles = makeStyles((theme) => ({
         alignItems: 'center',
         fontSize: '20px',
         flex: '1',
-        
+        fontWeight: 'bold',
+
         '& > *': {
             fontSize: '30px',
         },
+    },
+
+    cartCloseIcon: {
+        cursor: 'pointer',
+        padding: '4px',
     },
 
     productList: {
@@ -263,12 +271,59 @@ const cartStyles = makeStyles((theme) => ({
         margin: '24px 0',
     },
 
-    cartCloseIcon: {
-        cursor: 'pointer',
-        padding: '4px',
+    productListed: {
+        borderBottom: `solid 1px ${themeConfig.colors.divisories}`,
+        marginBottom: '8px',
+
+        '& > div': {
+            paddingBottom: '8px !important',
+        },
+
+        '&:last-child': {
+            border: 'none',
+        }
     },
 
-    cartBottom:{
+    productDetails: {
+        position: 'relative',
+
+        '& > div:not(:first-child)': {
+            margin: '12px 0',
+            display: 'flex',
+            justifyContent: 'space-between',
+            alignItems: 'center',
+        }
+    },
+
+    productName: {
+        textAlign: 'center',
+        fontSize: '18px',
+    },
+
+    productQuantity: {
+        flex: '1',
+        alignItems: 'center',
+        display: 'flex',
+        justifyContent: 'center',
+
+        '& > span': {
+            width: '50px',
+            textAlign: 'center'
+        },
+
+        '& > svg': {
+            cursor: 'pointer',
+        },
+    },
+
+    removeProductIcon: {
+        position: 'absolute',
+        top: '8px',
+        right: '8px',
+        cursor: 'pointer'
+    },
+
+    cartBottom: {
         flex: 1,
     },
 
