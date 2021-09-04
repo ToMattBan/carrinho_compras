@@ -16,19 +16,17 @@ export default function Header() {
     const globalClasses = globalStyles();
     const headClasses = headerStyles();
 
-    const path = "/carrinho_compras"
-
     return (
         <AppBar className={headClasses.header}>
             <Toolbar className={headClasses.headerToolbars}>
                 <div className={globalClasses.gutter}>
-                    <a href={path} className={headClasses.headerLogoTitle}>
+                    <a href="#" className={headClasses.headerLogoTitle}>
                         <Typography variant="h6" noWrap>
                             Lojenha Onlaine
                         </Typography>
                     </a>
 
-                    <a href={`${path}/user`} className={headClasses.headerUserSpace}>
+                    <a href="#" className={headClasses.headerUserSpace}>
                         <span>Mathias</span>
                         <Avatar>M</Avatar>
                     </a>
@@ -53,11 +51,11 @@ export default function Header() {
 
                     <div>
                         <List className={headClasses.headerNavbar}>
-                            <ListItem button component="a" href={`${path}/camisas`}>Camisetas</ListItem>
-                            <ListItem button component="a" href={`${path}/calcas`}>Calças</ListItem>
-                            <ListItem button component="a" href={`${path}/blusas`}>Blusas</ListItem>
-                            <ListItem button component="a" href={`${path}/vestidos`}>Vestidos</ListItem>
-                            <ListItem button component="a" href={`${path}/cart`}>
+                            <ListItem button component="a" href="#">Camisetas</ListItem>
+                            <ListItem button component="a" href="#">Calças</ListItem>
+                            <ListItem button component="a" href="#">Blusas</ListItem>
+                            <ListItem button component="a" href="#">Vestidos</ListItem>
+                            <ListItem button component="a" href="#">
                                 <ShoppingCart />
                             </ListItem>
                         </List>

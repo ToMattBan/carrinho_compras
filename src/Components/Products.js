@@ -9,13 +9,11 @@ export default function Products(props) {
     price = parseFloat(price);
     promotionPrice = parseFloat(promotionPrice);
 
-    const path = "/carrinho_compras"
-
     var productClasses = productsStyle();
 
     return (
         <div id={id} className={productClasses.productFather}>
-            <a href={`${path}/${url}`} className={productClasses.productAnchor}>
+            <a href="#" className={productClasses.productAnchor}>
                 <img src={image} alt={name} width="100%" />
                 <div>{name}</div>
                 <div>{price.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</div>
