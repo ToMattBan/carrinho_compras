@@ -42,10 +42,12 @@ export default function HeaderSecondBar(props) {
 
                 <div>
                     <List className={headClasses.headerNavbar}>
-                        <ListItem button component="a" href="#">Camisetas</ListItem>
-                        <ListItem button component="a" href="#">Calças</ListItem>
-                        <ListItem button component="a" href="#">Blusas</ListItem>
-                        <ListItem button component="a" href="#">Vestidos</ListItem>
+                        <div className={headClasses.headerCategories}>
+                            <ListItem button component="a" href="#">Camisetas</ListItem>
+                            <ListItem button component="a" href="#">Calças</ListItem>
+                            <ListItem button component="a" href="#">Blusas</ListItem>
+                            <ListItem button component="a" href="#">Vestidos</ListItem>
+                        </div>
                         <ListItem button component="a" href="#">
                             <ShoppingCart onClick={e => setIsOpen(isOpen === false ? true : false)} />
                         </ListItem>

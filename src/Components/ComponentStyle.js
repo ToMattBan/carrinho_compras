@@ -67,11 +67,6 @@ const headerStyles = makeStyles((theme) => ({
     },
 
     headerLogoTitle: {
-        display: 'none',
-        [theme.breakpoints.up('sm')]: {
-            display: 'block',
-        },
-
         color: themeConfig.colors.primary,
         textDecoration: 'none',
     },
@@ -132,20 +127,28 @@ const headerStyles = makeStyles((theme) => ({
     headerNavbar: {
         display: 'flex',
         padding: 0,
-        marginRight: '-16px',
+        marginRight: '-12px',
+    },
+
+    headerCategories: {
+        display: 'flex',
+
+        [theme.breakpoints.down('sm')]: {
+            display: 'none'
+        },
     },
 }));
 
 const pageListProductsStyles = makeStyles((theme) => ({
     container: {
-        margin: '24px 0',
+        margin: '24px auto',
 
         [theme.breakpoints.up('sm')]: {
-            margin: '32px 0',
+            margin: '32px auto',
         },
 
         [theme.breakpoints.up('md')]: {
-            margin: '64px 0',
+            margin: '64px auto',
         },
     },
 }));
@@ -202,8 +205,16 @@ const productsStyle = makeStyles((theme) => ({
 }));
 
 const filterStyle = makeStyles((theme) => ({
+
     filtersFather: {
-        borderRight: `solid 1px ${themeConfig.colors.divisories}`,
+        [theme.breakpoints.up('md')]: {
+            borderRight: `solid 1px ${themeConfig.colors.divisories}`,
+        },
+
+        [theme.breakpoints.down('sm')]: {
+            paddingBottom: '8px',
+            borderBottom: `solid 1px ${themeConfig.colors.divisories}`,
+        },
     },
 
     filtersOrigin: {
@@ -211,9 +222,40 @@ const filterStyle = makeStyles((theme) => ({
         fontWeight: "bold",
     },
 
+    filterCapsule: {
+        [theme.breakpoints.up('md')]: {
+            marginTop: '24px',
+        },
+    },
+
     filtersName: {
         fontWeight: "bold",
-        marginTop: '24px',
+        display: 'flex',
+        alignItems: 'center',
+
+        [theme.breakpoints.down('sm')]: {
+            cursor: 'pointer',
+        },
+
+        '& > svg': {
+            marginLeft: '4px',
+
+            [theme.breakpoints.up('md')]: {
+                display: 'none',
+            },
+        },
+    },
+
+    filterContent: {
+        [theme.breakpoints.down('sm')]: {
+            maxHeight: '0',
+            overflow: 'hidden',
+            animation: 'all 0.4s'
+        },
+    },
+
+    filterContentOpen: {
+        maxHeight: '200px',
     },
 
     filtersInputRadio: {
@@ -232,7 +274,7 @@ const cartStyles = makeStyles((theme) => ({
         backgroundColor: '#eee',
         borderLeft: 'solid 2px',
         borderColor: themeConfig.colors.divisories,
-        minWidth: '400px',
+        minWidth: 'calc(375px - 32px)',
         maxWidth: '600px',
         transform: 'translateX(100%)',
         animation: 'all 0.5s ease-in-out',

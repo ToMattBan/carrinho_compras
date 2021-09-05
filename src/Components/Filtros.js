@@ -1,13 +1,25 @@
 // Components
 import { List, ListItem } from '@material-ui/core';
+import AddIcon from '@material-ui/icons/Add';
 
 // Theme
 import { filterStyle } from "./ComponentStyle.js"
 
+function toggleFilters(e, filterClasses) {
+    var _target = e.target;
+
+    while (!_target.classList.contains(filterClasses.filtersName)) {
+        _target = _target.parentElement;
+    }
+
+    _target = _target.nextSibling;
+    _target.classList.toggle(filterClasses.filterContentOpen)
+}
+
 export default function PageProducts() {
     var filters = [
         {
-            name: '',
+            name: 'Lançamentos',
             optionName: 'all',
             options: [
                 "Todos os Produtos",
@@ -56,24 +68,29 @@ export default function PageProducts() {
             <div className={filterClasses.filtersOrigin}>Filtros</div>
 
             {filters.map((filter, index) => (
-                <List key={index} >
-                    <div className={filterClasses.filtersName}>{filter.name}</div>
-                    {
-                        filter.options.map((option, index) => (
-                            <label htmlFor={`${filter.optionName}_${index}`} key={index} >
-                                <ListItem button>
-                                    
-                                    <input type="radio" 
-                                        name={filter.optionName} 
-                                        id={`${filter.optionName}_${index}`} 
-                                        className={filterClasses.filtersInputRadio}
-                                    />
+                <List key={index} className={filterClasses.filterCapsule} >
+                    <div className={filterClasses.filtersName} onClick={e => toggleFilters(e, filterClasses)}>
+                        {filter.name}
+                        <AddIcon />
+                    </div>
+                    <div className={filterClasses.filterContent} >
+                        {
+                            filter.options.map((option, index) => (
+                                <label htmlFor={`${filter.optionName}_${index}`} key={index} >
+                                    <ListItem button>
 
-                                    {option}
-                                </ListItem>
-                            </label>
-                        ))
-                    }
+                                        <input type="radio"
+                                            name={filter.optionName}
+                                            id={`${filter.optionName}_${index}`}
+                                            className={filterClasses.filtersInputRadio}
+                                        />
+
+                                        {option}
+                                    </ListItem>
+                                </label>
+                            ))
+                        }
+                    </div>
                 </List>
             ))}
         </div >
