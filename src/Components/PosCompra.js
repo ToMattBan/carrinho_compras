@@ -1,29 +1,75 @@
 // Components
-import { Typography } from "@material-ui/core";
+import { Grid, Typography } from "@material-ui/core";
 import { useState } from "react";
+import { Redirect } from "react-router";
 
 // Themes
 import { endShop } from "./ComponentStyle";
+import { globalStyles } from "./ComponentStyle.js"
+
+// Components
+import ProductBuyed from "./ProductBuyed";
 
 export default function PosCompra(props) {
     var { listCart, setListCart, totalValue } = props;
+
     const tanksClasses = endShop();
+    var globalClasses = globalStyles();
 
     const [productsBuyed, setProductsBuyed] = useState(JSON.parse(listCart));
     const [totalBuyed, setTotalBuyed] = useState(totalValue);
     setListCart('[]');
 
+    window.setCartOpen(false);
+
     return (
-        <div>
-            <Typography variant="h4" noWrap className={tanksClasses.tankyouText}>
-                Obrigado por sua compra
-            </Typography>
+        <div className={globalClasses.gutter}>
 
-            {productsBuyed.map((product) => (
-                1
-            ))}
+            {
+                totalBuyed === 0 ?
+                    <Redirect to="/" /> :
 
-            {totalBuyed}
+                    <div>
+                        <Typography variant="h4" className={tanksClasses.tankyouTitle}>
+                            Obrigado por sua compra!
+                        </Typography>
+
+                        <div className={tanksClasses.tankyouText}>
+                            <p>Obrigado por comprar na Lojenha Online! Estamos muito felizes em fazer parte da sua vida entregando sempre o melhor produto com a melhor qualidade possível! De nossos corações para a sua casa!</p>
+                            <p>Agora faltam poucos passos para que nossos produtos cheguem até você! Basta ter certeza que o pagamento foi realizado e que seus dados de entrega estão corretos! Caso haja alguma divergência, entre em contato conosco imediatamente pelo fone: <a href="tel:0800644644">0800 644 644</a>.</p>
+                            <p>
+                                <div>Seus dados de entrega cadastrados são:</div>
+                                <Grid container spacing={3} className={tanksClasses.detailsShip}>
+                                    <Grid item xs={12}>
+                                        <span>Rua:</span>
+                                        <span>Carlos Almeida</span>
+                                    </Grid>
+                                    <Grid item xs={12}>
+                                        <span>Cidade:</span>
+                                        <span>São Januário dos Santos</span>
+                                    </Grid>
+                                    <Grid item xs={12}>
+                                        <span>Estado:</span>
+                                        <span>Minas Gerais, MG</span>
+                                    </Grid>
+                                    <Grid item xs={12}>
+                                        <span>CEP:</span>
+                                        <span>013568-98</span>
+                                    </Grid>
+                                </Grid>
+                            </p>
+                            <p>Seu pedido consiste dos seguintes produtos:</p>
+                        </div>
+
+                        <Grid container spacing={5}>
+                            {productsBuyed.map((product) => (
+                                <Grid item xs={12} md={6} lg={4}>
+                                    <ProductBuyed product={product} />
+                                </Grid>
+                            ))}
+                        </Grid>
+                    </div>
+            }
         </div>
     )
 }

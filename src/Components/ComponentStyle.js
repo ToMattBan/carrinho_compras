@@ -22,6 +22,7 @@ const globalStyles = makeStyles((theme) => ({
         maxWidth: '1300px',
         margin: 'auto',
         padding: '0 12px',
+        overflow: 'hidden',
 
         [theme.breakpoints.up('sm')]: {
             padding: '0 32px',
@@ -129,7 +130,7 @@ const headerStyles = makeStyles((theme) => ({
         display: 'flex',
 
         [theme.breakpoints.down('sm')]: {
-            display: 'none'
+            display: 'none !important',
         },
 
         '&, *': {
@@ -190,7 +191,7 @@ const productsStyle = makeStyles((theme) => ({
             height: '2px',
             left: '-12px',
             top: '6px',
-            rotate: '10deg',
+            transform: 'rotate(10deg)',
         },
     },
 
@@ -313,6 +314,11 @@ const cartStyles = makeStyles((theme) => ({
         overflowX: 'hidden',
         overflowY: 'auto',
         margin: '24px 0',
+        scrollbarColor: 'transparent transparent',
+
+        '&::-webkit-scrollbar': {
+            backgroundColor: 'transparent',
+        },
     },
 
     productListed: {
@@ -377,22 +383,73 @@ const cartStyles = makeStyles((theme) => ({
     },
 
     cartFinalizePurchase: {
-        backgroundColor: themeConfig.colors.primary,
-        color: themeConfig.colors.secundary,
-        textTransform: 'capitalize',
-        marginTop: '12px',
-        width: '100%',
+        textDecoration: 'none',
 
-        '&:hover': {
-            backgroundColor: themeConfig.colors.terciary,
-        }
+        '& > button': {
+            backgroundColor: themeConfig.colors.primary,
+            color: themeConfig.colors.secundary,
+            textTransform: 'capitalize',
+            marginTop: '12px',
+            width: '100%',
+
+            '&:hover': {
+                backgroundColor: themeConfig.colors.terciary,
+            },
+        },
     },
 }))
 
 const endShop = makeStyles((theme) => ({
-    tankyouText: {
-        marginTop: '32px',
+    tankyouTitle: {
+        margin: '32px 0',
         textAlign: 'center',
+    },
+
+    tankyouText: {
+        marginBottom: '32px',
+        
+        textAlign: 'center',
+        lineHeight: '1.5',
+    },
+
+    detailsShip: {
+        paddingTop: '8px',
+        paddingBottom: '16px',
+
+        '& > *': {
+            padding: '0 !important',
+        },
+
+        '& span': {
+            margin: '0 4px'
+        }
+    },
+
+    productListed: {
+        borderBottom: `solid 1px ${themeConfig.colors.divisories}`,
+
+        '& > div': {
+            paddingBottom: '8px !important',
+        },
+    },
+
+    productDetails: {
+        position: 'relative',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'space-between',
+
+        '& > div:not(:first-child) > div': {
+            margin: '12px 0',
+            display: 'flex',
+            justifyContent: 'space-between',
+            alignItems: 'center',
+        }
+    },
+
+    productName: {
+        textAlign: 'center',
+        fontSize: '18px',
     },
 }))
 

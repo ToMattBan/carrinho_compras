@@ -88,7 +88,7 @@ export default function CartProduct(props) {
                 <div>
                     <span>Preço Un.:</span>
                     <span>
-                        {price.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}
+                        {parseFloat(price).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}
                     </span>
                 </div>
 

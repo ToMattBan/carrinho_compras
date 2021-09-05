@@ -35,8 +35,8 @@ export default function Cart(props) {
                         {totalValue.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}
                     </span>
                 </div>
-                <Link to="/obrigado">
-                    <Button variant="contained" className={cartClasses.cartFinalizePurchase}>
+                <Link to="/obrigado" className={cartClasses.cartFinalizePurchase}>
+                    <Button variant="contained">
                         Finalizar compra
                     </Button>
                 </Link>
