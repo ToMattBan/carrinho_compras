@@ -31,23 +31,19 @@ const globalStyles = makeStyles((theme) => ({
         [theme.breakpoints.up('md')]: {
             padding: '0 64px',
         },
-
-        [theme.breakpoints.up('lg')]: {
-            padding: '0 128px',
-        },
     }
 }));
 
 const headerStyles = makeStyles((theme) => ({
     headerFather: {
         backgroundColor: 'inherit',
-        position: 'sticky',
+        position: 'sticky !important',
         top: '0',
     },
 
     headerToolbars: {
-        padding: '8px 0',
-        minHeight: '30px',
+        padding: '8px 0 !important',
+        minHeight: '30px !important',
 
         '&:first-child': {
             backgroundColor: themeConfig.colors.secundary,
@@ -126,8 +122,8 @@ const headerStyles = makeStyles((theme) => ({
 
     headerNavbar: {
         display: 'flex',
-        padding: 0,
-        marginRight: '-12px',
+        padding: '0 !important',
+        marginRight: '-12px !important',
     },
 
     headerCategories: {
