@@ -1,5 +1,6 @@
 // Theme
 import { Button } from "@material-ui/core";
+import { Link } from "react-router-dom";
 import { productsStyle } from "./ComponentStyle.js"
 
 function addToCart(product, listCart, setListCart, totalValue, setTotalValue) {
@@ -35,7 +36,7 @@ function addToCart(product, listCart, setListCart, totalValue, setTotalValue) {
 
 export default function Products(props) {
     var { product, listCart, setListCart, totalValue, setTotalValue } = props;
-    let { id, image, name, price, promotionPrice } = product;
+    let { id, url, image, name, price, promotionPrice } = product;
 
     price = parseFloat(price);
     promotionPrice = parseFloat(promotionPrice);
@@ -44,7 +45,7 @@ export default function Products(props) {
 
     return (
         <div id={id} className={productClasses.productFather}>
-            <a href="#" className={productClasses.productAnchor}>
+            <Link to={url} className={productClasses.productAnchor}>
                 <img src={image} alt={name} width="100%" />
                 <div className={productClasses.productName}>{name}</div>
 
@@ -60,7 +61,7 @@ export default function Products(props) {
                     }
 
                 </div>
-            </a>
+            </Link>
             <Button variant="contained" className={productClasses.productAddCart} onClick={e => addToCart(product, listCart, setListCart, totalValue, setTotalValue)}>
                 Adicionar ao carrinho
             </Button>

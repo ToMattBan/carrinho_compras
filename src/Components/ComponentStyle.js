@@ -132,6 +132,13 @@ const headerStyles = makeStyles((theme) => ({
         [theme.breakpoints.down('sm')]: {
             display: 'none'
         },
+
+        '&, *': {
+            color: themeConfig.colors.secundary,
+            textDecoration: 'none',
+            display: 'flex',
+            alignItems: 'center',
+        },
     },
 }));
 

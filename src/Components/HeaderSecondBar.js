@@ -6,6 +6,7 @@ import Toolbar from '@material-ui/core/Toolbar';
 import InputBase from '@material-ui/core/InputBase';
 import { List, ListItem } from '@material-ui/core';
 import Cart from './Cart.js';
+import { Link } from 'react-router-dom';
 
 // Icons
 import SearchIcon from '@material-ui/icons/Search';
@@ -43,13 +44,21 @@ export default function HeaderSecondBar(props) {
                 <div>
                     <List className={headClasses.headerNavbar}>
                         <div className={headClasses.headerCategories}>
-                            <ListItem button component="a" href="#">Camisetas</ListItem>
-                            <ListItem button component="a" href="#">Calças</ListItem>
-                            <ListItem button component="a" href="#">Blusas</ListItem>
-                            <ListItem button component="a" href="#">Vestidos</ListItem>
+                            <Link to="/camisetas">
+                                <ListItem button>Camisetas</ListItem>
+                            </Link>
+                            <Link to="/calças">
+                                <ListItem button>Calças</ListItem>
+                            </Link>
+                            <Link to="/blusas">
+                                <ListItem button>Blusas</ListItem>
+                            </Link>
+                            <Link to="/vestidos">
+                                <ListItem button>Vestidos</ListItem>
+                            </Link>
                         </div>
-                        <ListItem button component="a" href="#">
-                            <ShoppingCart onClick={e => setIsOpen(isOpen === false ? true : false)} />
+                        <ListItem button onClick={e => setIsOpen(isOpen === false ? true : false)} >
+                            <ShoppingCart />
                         </ListItem>
                     </List>
 

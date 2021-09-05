@@ -2,7 +2,7 @@
   {
     "id": "109284",
     "image": "https://image.freepik.com/free-photo/young-woman-wearing-long-red-dress-white-background_1139-1192.jpg",
-    "url": "products/109284",
+    "url": "/products/109284",
     "name": "Vestido Vermelho",
     "price": "315.99",
     "promotionPrice": "223.99"
@@ -10,7 +10,7 @@
   {
     "id": "109285",
     "image": "https://image.freepik.com/free-photo/man-wearing-red-polo-shirt_1368-794.jpg",
-    "url": "products/109285",
+    "url": "/products/109285",
     "name": "Camiseta Vermelha",
     "price": "80.99",
     "promotionPrice": ""
@@ -18,7 +18,7 @@
   {
     "id": "109286",
     "image": "https://image.freepik.com/free-photo/closeup-shot-female-wearing-beautiful-silver-necklace-with-pendant_181624-24692.jpg",
-    "url": "products/109286",
+    "url": "/products/109286",
     "name": "Colar de Coração",
     "price": "85.99",
     "promotionPrice": "55.99"
@@ -26,7 +26,7 @@
   {
     "id": "109287",
     "image": "https://image.freepik.com/free-photo/man-black-jacket-standing-park-waiting-someone-high-quality-photo_144627-60187.jpg",
-    "url": "products/109287",
+    "url": "/products/109287",
     "name": "Jaqueta de Couro Preta",
     "price": "164.99",
     "promotionPrice": ""
@@ -34,7 +34,7 @@
   {
     "id": "109288",
     "image": "https://image.freepik.com/free-photo/african-gender-fluid-person-posing-green-shirt_23-2149030636.jpg",
-    "url": "products/109288",
+    "url": "/products/109288",
     "name": "Camiseta Verde",
     "price": "80.99",
     "promotionPrice": ""
@@ -42,7 +42,7 @@
   {
     "id": "109289",
     "image": "https://image.freepik.com/free-photo/fashion-photo-young-magnificent-woman-blue-dress_158595-354.jpg",
-    "url": "products/109289",
+    "url": "/products/109289",
     "name": "Vestido Azul",
     "price": "280.99",
     "promotionPrice": "199.99"
@@ -50,7 +50,7 @@
   {
     "id": "109290",
     "image": "https://image.freepik.com/free-photo/denims_1303-4490.jpg",
-    "url": "products/109290",
+    "url": "/products/109290",
     "name": "Calça Jeans",
     "price": "150.00",
     "promotionPrice": "119.99"
@@ -58,7 +58,7 @@
   {
     "id": "109291",
     "image": "https://image.freepik.com/free-psd/front-view-stylish-man-hoodie-with-headphones_23-2148939690.jpg",
-    "url": "products/109291",
+    "url": "/products/109291",
     "name": "Casaco de Moletom",
     "price": "210.00",
     "promotionPrice": ""
@@ -66,7 +66,7 @@
   {
     "id": "109292",
     "image": "https://image.freepik.com/free-photo/long-earring-with-violet-precious-stones-hang-from-woman-s-ear_8353-5042.jpg",
-    "url": "products/109292",
+    "url": "/products/109292",
     "name": "Brincos de Jóias",
     "price": "89,90",
     "promotionPrice": ""
@@ -74,7 +74,7 @@
   {
     "id": "109293",
     "image": "https://image.freepik.com/free-photo/closeup-shot-female-wearing-beautiful-silver-necklace-with-diamond-pendant_181624-21106.jpg",
-    "url": "products/109293",
+    "url": "/products/109293",
     "name": "Colar com Pingente",
     "price": "95.00",
     "promotionPrice": "89.90"
@@ -82,7 +82,7 @@
   {
     "id": "109294",
     "image": "https://image.freepik.com/free-photo/vertical-shot-african-american-female-with-tattoos-wearing-purple-shirt-sunglasses_181624-41247.jpg",
-    "url": "products/109294",
+    "url": "/products/109294",
     "name": "Camisa Lilás",
     "price": "89.99",
     "promotionPrice": ""
@@ -90,7 +90,7 @@
   {
     "id": "109295",
     "image": "https://image.freepik.com/free-photo/portrait-smiling-blonde-mature-woman-red-jacket-standing-against-white-background_23-2148043559.jpg",
-    "url": "products/109295",
+    "url": "/products/109295",
     "name": "Jaqueta de Couro Vermelha",
     "price": "340.00",
     "promotionPrice": "279.99"

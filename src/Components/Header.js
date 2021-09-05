@@ -4,11 +4,14 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import { Avatar } from '@material-ui/core';
 import HeaderSecondBar from './HeaderSecondBar.js';
+import { Link } from 'react-router-dom';
 
 // Theme
 import { globalStyles, headerStyles } from "./ComponentStyle.js"
 
 export default function Header(props) {
+    console.log(props)
+    console.log(props.pages)
     var { listCart, setListCart, totalValue, setTotalValue } = props;
     const globalClasses = globalStyles();
     const headClasses = headerStyles();
@@ -17,11 +20,11 @@ export default function Header(props) {
         <AppBar className={headClasses.headerFather}>
             <Toolbar className={headClasses.headerToolbars}>
                 <div className={globalClasses.gutter}>
-                    <a href="#" className={headClasses.headerLogoTitle}>
+                    <Link to={`/`} className={headClasses.headerLogoTitle}>
                         <Typography variant="h6" noWrap>
                             Lojenha Onlaine
                         </Typography>
-                    </a>
+                    </Link>
 
                     <a href="#" className={headClasses.headerUserSpace}>
                         <span>Mathias</span>
