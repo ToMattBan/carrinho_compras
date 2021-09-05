@@ -116,8 +116,8 @@ const headerStyles = makeStyles((theme) => ({
     },
 
     headerSeachInput: {
-        padding: '8px 12px',
-        width: '100%',
+        padding: '8px 12px !important',
+        width: '100% !important',
     },
 
     headerNavbar: {
@@ -323,7 +323,7 @@ const cartStyles = makeStyles((theme) => ({
 
     productListed: {
         borderBottom: `solid 1px ${themeConfig.colors.divisories}`,
-        marginBottom: '8px',
+        marginBottom: '8px !important',
 
         '& > div': {
             paddingBottom: '8px !important',
@@ -401,7 +401,7 @@ const cartStyles = makeStyles((theme) => ({
 
 const endShop = makeStyles((theme) => ({
     tankyouTitle: {
-        margin: '32px 0',
+        margin: '32px 0 !important',
         textAlign: 'center',
     },
 

@@ -29,7 +29,7 @@ export default function PosCompra(props) {
                 totalBuyed === 0 ?
                     <Redirect to="/" /> :
 
-                    <div>
+                    <div style={{marginBottom: '64px'}}>
                         <Typography variant="h4" className={tanksClasses.tankyouTitle}>
                             Obrigado por sua compra!
                         </Typography>
