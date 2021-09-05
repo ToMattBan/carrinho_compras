@@ -1,5 +1,4 @@
 import { makeStyles } from '@material-ui/core/styles';
-import { CenterFocusStrong } from '@material-ui/icons';
 
 const themeConfig = {
     colors: {
@@ -390,6 +389,13 @@ const cartStyles = makeStyles((theme) => ({
     },
 }))
 
+const endShop = makeStyles((theme) => ({
+    tankyouText: {
+        marginTop: '32px',
+        textAlign: 'center',
+    },
+}))
+
 export {
     globalStyles,
     headerStyles,
@@ -397,4 +403,5 @@ export {
     productsStyle,
     filterStyle,
     cartStyles,
+    endShop,
 }

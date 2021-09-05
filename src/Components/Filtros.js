@@ -1,5 +1,7 @@
 // Components
 import { List, ListItem } from '@material-ui/core';
+
+// Icons
 import AddIcon from '@material-ui/icons/Add';
 
 // Theme

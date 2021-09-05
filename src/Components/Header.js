@@ -10,8 +10,6 @@ import { Link } from 'react-router-dom';
 import { globalStyles, headerStyles } from "./ComponentStyle.js"
 
 export default function Header(props) {
-    console.log(props)
-    console.log(props.pages)
     var { listCart, setListCart, totalValue, setTotalValue } = props;
     const globalClasses = globalStyles();
     const headClasses = headerStyles();

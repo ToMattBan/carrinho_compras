@@ -1,9 +1,11 @@
 // Components
-import ShoppingBasketOutlinedIcon from '@material-ui/icons/ShoppingBasketOutlined';
-import CloseOutlinedIcon from '@material-ui/icons/CloseOutlined';
 import CartProduct from './CartProduct.js';
 import { Button } from '@material-ui/core';
-import { useState } from 'react';
+import { Link } from 'react-router-dom';
+
+// Icons
+import ShoppingBasketOutlinedIcon from '@material-ui/icons/ShoppingBasketOutlined';
+import CloseOutlinedIcon from '@material-ui/icons/CloseOutlined';
 
 // Theme
 import { cartStyles } from "./ComponentStyle.js"
@@ -33,9 +35,11 @@ export default function Cart(props) {
                         {totalValue.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}
                     </span>
                 </div>
-                <Button variant="contained" className={cartClasses.cartFinalizePurchase}>
-                    Finalizar compra
-                </Button>
+                <Link to="/obrigado">
+                    <Button variant="contained" className={cartClasses.cartFinalizePurchase}>
+                        Finalizar compra
+                    </Button>
+                </Link>
             </div>
         </div>
     )

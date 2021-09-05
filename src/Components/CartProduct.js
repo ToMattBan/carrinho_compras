@@ -1,8 +1,10 @@
 // Components
+import { Grid } from "@material-ui/core";
+
+// Icons
 import DeleteForeverOutlinedIcon from '@material-ui/icons/DeleteForeverOutlined';
 import AddIcon from '@material-ui/icons/Add';
 import RemoveIcon from '@material-ui/icons/Remove';
-import { Grid } from "@material-ui/core";
 
 // Theme
 import { cartStyles } from "./ComponentStyle.js"
