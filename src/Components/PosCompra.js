@@ -36,7 +36,6 @@ export default function PosCompra(props) {
 
                         <div className={tanksClasses.tankyouText}>
                             <p>Obrigado por comprar na Lojenha Online! Estamos muito felizes em fazer parte da sua vida entregando sempre o melhor produto com a melhor qualidade possível! De nossos corações para a sua casa!</p>
-                            <p>Agora faltam poucos passos para que nossos produtos cheguem até você! Basta ter certeza que o pagamento foi realizado e que seus dados de entrega estão corretos! Caso haja alguma divergência, entre em contato conosco imediatamente pelo fone: <a href="tel:0800644644">0800 644 644</a>.</p>
                             <p>
                                 <div>Seus dados de entrega cadastrados são:</div>
                                 <Grid container spacing={3} className={tanksClasses.detailsShip}>
