@@ -225,9 +225,15 @@ const filterStyle = makeStyles((theme) => ({
         fontWeight: "bold",
     },
 
-    filterCapsule: {
+    filterAccordion: {
         [theme.breakpoints.up('md')]: {
-            marginTop: '24px',
+            backgroundColor: 'transparent',
+            boxShadow: 'none',
+
+            '& > div:last-child': {
+                height: 'auto !important',
+                visibility: 'inherit !important',
+            },
         },
     },
 
@@ -240,9 +246,7 @@ const filterStyle = makeStyles((theme) => ({
             cursor: 'pointer',
         },
 
-        '& > svg': {
-            marginLeft: '4px',
-
+        '& > div:last-child': {
             [theme.breakpoints.up('md')]: {
                 display: 'none',
             },
@@ -250,15 +254,9 @@ const filterStyle = makeStyles((theme) => ({
     },
 
     filterContent: {
-        [theme.breakpoints.down('sm')]: {
-            maxHeight: '0',
-            overflow: 'hidden',
-            transition: 'all 0.4s'
-        },
-    },
-
-    filterContentOpen: {
-        maxHeight: '200px',
+        display: 'block',
+        paddingTop: '0 !important',
+        marginTop: '-8px',
     },
 
     filtersInputRadio: {
@@ -407,7 +405,7 @@ const endShop = makeStyles((theme) => ({
 
     tankyouText: {
         marginBottom: '32px',
-        
+
         textAlign: 'center',
         lineHeight: '1.5',
     },

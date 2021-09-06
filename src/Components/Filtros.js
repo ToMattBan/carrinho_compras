@@ -1,5 +1,5 @@
 // Components
-import { List, ListItem } from '@material-ui/core';
+import { Accordion, AccordionSummary, AccordionDetails, List, ListItem } from '@material-ui/core';
 
 // Icons
 import AddIcon from '@material-ui/icons/Add';
@@ -70,29 +70,32 @@ export default function PageProducts() {
             <div className={filterClasses.filtersOrigin}>Filtros</div>
 
             {filters.map((filter, index) => (
-                <List key={index} className={filterClasses.filterCapsule} >
-                    <div className={filterClasses.filtersName} onClick={e => toggleFilters(e, filterClasses)}>
-                        {filter.name}
-                        <AddIcon />
-                    </div>
-                    <div className={filterClasses.filterContent} >
-                        {
-                            filter.options.map((option, index) => (
-                                <label htmlFor={`${filter.optionName}_${index}`} key={index} >
-                                    <ListItem button>
+                <List key={index} >
+                    <Accordion className={filterClasses.filterAccordion}>
+                        <AccordionSummary expandIcon={<AddIcon />}
+                            className={filterClasses.filtersName} onClick={e => toggleFilters(e, filterClasses)}>
+                            {filter.name}
+                        </AccordionSummary>
 
-                                        <input type="radio"
-                                            name={filter.optionName}
-                                            id={`${filter.optionName}_${index}`}
-                                            className={filterClasses.filtersInputRadio}
-                                        />
+                        <AccordionDetails className={filterClasses.filterContent} >
+                            {
+                                filter.options.map((option, index) => (
+                                    <label htmlFor={`${filter.optionName}_${index}`} key={index} >
+                                        <ListItem button>
 
-                                        {option}
-                                    </ListItem>
-                                </label>
-                            ))
-                        }
-                    </div>
+                                            <input type="radio"
+                                                name={filter.optionName}
+                                                id={`${filter.optionName}_${index}`}
+                                                className={filterClasses.filtersInputRadio}
+                                            />
+
+                                            {option}
+                                        </ListItem>
+                                    </label>
+                                ))
+                            }
+                        </AccordionDetails>
+                    </Accordion>
                 </List>
             ))}
         </div >
