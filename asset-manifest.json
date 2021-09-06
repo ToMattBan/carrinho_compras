@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/carrinho_compras/static/css/main.e374b479.chunk.css",
-    "main.js": "/carrinho_compras/static/js/main.cdb94af7.chunk.js",
-    "main.js.map": "/carrinho_compras/static/js/main.cdb94af7.chunk.js.map",
+    "main.js": "/carrinho_compras/static/js/main.8da6b06b.chunk.js",
+    "main.js.map": "/carrinho_compras/static/js/main.8da6b06b.chunk.js.map",
     "runtime-main.js": "/carrinho_compras/static/js/runtime-main.e91ba403.js",
     "runtime-main.js.map": "/carrinho_compras/static/js/runtime-main.e91ba403.js.map",
     "static/js/2.a019ad99.chunk.js": "/carrinho_compras/static/js/2.a019ad99.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.e91ba403.js",
     "static/js/2.a019ad99.chunk.js",
     "static/css/main.e374b479.chunk.css",
-    "static/js/main.cdb94af7.chunk.js"
+    "static/js/main.8da6b06b.chunk.js"
   ]
 }
