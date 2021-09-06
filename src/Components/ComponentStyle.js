@@ -253,7 +253,7 @@ const filterStyle = makeStyles((theme) => ({
         [theme.breakpoints.down('sm')]: {
             maxHeight: '0',
             overflow: 'hidden',
-            animation: 'all 0.4s'
+            transition: 'all 0.4s'
         },
     },
 
@@ -280,7 +280,7 @@ const cartStyles = makeStyles((theme) => ({
         minWidth: 'calc(375px - 32px)',
         maxWidth: '600px',
         transform: 'translateX(100%)',
-        animation: 'all 0.5s ease-in-out',
+        transition: 'all 0.5s ease-in-out',
         color: themeConfig.colors.primary,
         display: 'flex',
         flexDirection: 'column',
