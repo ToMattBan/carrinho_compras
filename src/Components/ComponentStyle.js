@@ -227,8 +227,8 @@ const filterStyle = makeStyles((theme) => ({
 
     filterAccordion: {
         [theme.breakpoints.up('md')]: {
-            backgroundColor: 'transparent',
-            boxShadow: 'none',
+            backgroundColor: 'transparent !important',
+            boxShadow: 'none !important',
 
             '& > div:last-child': {
                 height: 'auto !important',
@@ -254,9 +254,9 @@ const filterStyle = makeStyles((theme) => ({
     },
 
     filterContent: {
-        display: 'block',
+        display: 'block !important',
         paddingTop: '0 !important',
-        marginTop: '-8px',
+        marginTop: '-8px !important',
     },
 
     filtersInputRadio: {
